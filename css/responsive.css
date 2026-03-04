@@ -223,12 +223,12 @@
     .cv-download-btn,
     .cv-view-btn {
         top: 0.8rem;
-        padding: 0.65rem;
-        font-size: 0.85rem;
-        min-width: 44px;
+        padding: 0.6rem 0.7rem;
+        font-size: 0.76rem;
+        min-width: 102px;
         width: auto;
         height: auto;
-        gap: 0;
+        gap: 0.3rem;
     }
 
     .cv-download-btn {
@@ -236,18 +236,18 @@
     }
 
     .cv-view-btn {
-        right: calc(0.8rem + 44px + 0.55rem);
+        right: calc(0.8rem + 102px + 0.45rem);
     }
 
     .cv-download-btn span,
     .cv-view-btn span {
-        display: none;
+        display: inline;
     }
 
     .cv-download-btn i,
     .cv-view-btn i {
         margin: 0;
-        font-size: 1rem;
+        font-size: 0.85rem;
     }
 
     .footer-main {
@@ -532,8 +532,9 @@
     .cv-download-btn,
     .cv-view-btn {
         top: 0.6rem;
-        padding: 0.55rem;
-        min-width: 40px;
+        padding: 0.5rem 0.6rem;
+        font-size: 0.7rem;
+        min-width: 92px;
     }
 
     .cv-download-btn {
@@ -541,7 +542,7 @@
     }
 
     .cv-view-btn {
-        right: calc(0.6rem + 40px + 0.5rem);
+        right: calc(0.6rem + 92px + 0.4rem);
     }
 
     .cv-download-btn i,
