@@ -1,0 +1,21 @@
+{
+  "name": "Naveen Kumar | Portfolio",
+  "short_name": "Naveen Portfolio",
+  "description": "Portfolio of Naveen Kumar - Java Developer & Full Stack Web Developer",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["portfolio", "personal", "developer"],
+  "lang": "en",
+  "dir": "ltr"
+}

@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Naveen Kumar - Computer Science Student | Java Developer & Full Stack Web Developer. View my projects, skills, and experience.">
+    <meta name="keywords" content="Naveen Kumar, Java Developer, Full Stack Developer, Portfolio, Web Developer, Java, React, Node.js">
+    <meta name="author" content="Naveen Kumar">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2563eb">
+    
+    <!-- Preconnect to external resources for faster loading -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"></noscript>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/icons/favicon.svg?v=2" sizes="any" type="image/svg+xml">
+    <link rel="shortcut icon" href="assets/icons/favicon.svg?v=2" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/icons/favicon.svg?v=2">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Naveen Portfolio">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/Naveen2-G">
+    <meta property="og:title" content="Naveen Kumar | Java Developer & Full Stack Web Developer">
+    <meta property="og:description" content="Portfolio of Naveen Kumar - Java Developer & Full Stack Web Developer. Check out my projects, skills, and experience.">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/Naveen2-G">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://github.com/Naveen2-G">
+    <meta property="twitter:title" content="Naveen Kumar | Java Developer & Full Stack Web Developer">
+    <meta property="twitter:description" content="Portfolio of Naveen Kumar - Java Developer & Full Stack Web Developer.">
+    <meta property="twitter:image" content="https://avatars.githubusercontent.com/u/Naveen2-G">
+
+    <title>Naveen Kumar | Java Developer & Full Stack Web Developer  </title>
+    
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Gudela Naveen Kumar",
+        "url": "https://github.com/Naveen2-G",
+        "image": "https://avatars.githubusercontent.com/u/Naveen2-G",
+        "jobTitle": ["Java Developer", "Full Stack Web Developer", "AI Enthusiast"],
+        "description": "Computer Science student skilled in Java and modern full stack development",
+        "email": "naveengudela7@gmail.com",
+        "telephone": "+919346226686",
+        "sameAs": [
+            "https://www.linkedin.com/in/naveen53/",
+            "https://github.com/Naveen2-G"
+        ],
+        "knowsAbout": ["Java", "C++", "Python", "React", "Node.js", "Express.js", "MongoDB", "MySQL"],
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "University"
+        }
+    }
+    </script>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    
+    <!-- Vercel Web Analytics -->
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+    <!-- Skip Navigation for Accessibility -->
+    <a href="#home" class="skip-nav">Skip to main content</a>
+
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <div class="loader-text">Loading...</div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" title="Back to Top" aria-label="Scroll back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Copy Toast Notification -->
+    <div class="copy-toast" id="copyToast">
+        <i class="fas fa-check-circle"></i>
+        <span>Email copied to clipboard!</span>
+    </div>
+
+    <!-- CV Download Button -->
+    <a href="assets/documents/NaveenKumarCV.pdf" download="NaveenKumarCV.pdf" class="cv-download-btn" onclick="downloadCV(event)">
+        <i class="fas fa-download"></i>
+        <span>Download CV</span>
+    </a>
+
+    <a href="assets/documents/NaveenKumarCV.pdf" target="_blank" rel="noopener noreferrer" class="cv-view-btn" aria-label="View CV in new tab">
+        <i class="fas fa-eye" aria-hidden="true"></i>
+        <span>View CV</span>
+    </a>
+
+    <!-- Light Mode Animated Background -->
+    <div class="light-bg-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <!-- Particle Background -->
+    <div id="particles-js" style="position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1;"></div>
+
+    <!-- Floating Geometric Shapes -->
+    <div class="floating-shapes">
+        <div class="shape circle"></div>
+        <div class="shape"></div>
+        <div class="shape circle"></div>
+        <div class="shape triangle"></div>
+        <div class="shape circle"></div>
+        <div class="shape"></div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar"></div>
+    </div>
+    <nav>
+        <a href="#home" class="nav-brand" aria-label="Home">
+            <img src="assets/icons/favicon.svg" alt="Naveen Portfolio Logo" loading="lazy">
+            <span class="sr-only">Naveen Portfolio Home</span>
+        </a>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#skills" class="nav-link" onclick="toggleMenu()">Skills</a></li>
+            <li><a href="#experience" class="nav-link" onclick="toggleMenu()">Experience</a></li>
+            <li><a href="#projects" class="nav-link" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#achievements" class="nav-link" onclick="toggleMenu()">Achievements</a></li>
+            <li><a href="#education" class="nav-link" onclick="toggleMenu()">Education</a></li>
+            <li><a href="#contact" class="nav-link" onclick="toggleMenu()">Contact</a></li>
+            <li>
+                <div class="theme-toggle" onclick="toggleTheme()">
+                    <div class="theme-toggle-ball"></div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <a href="https://www.linkedin.com/in/naveen53/" target="_blank" rel="noopener noreferrer" class="badge" style="cursor: pointer; text-decoration: none;">🚀 Available for Internship & Entry-Level Roles</a>
+                <h1 class="glitch" data-text="Naveen Kumar">Naveen Kumar</h1>
+                <div class="typing-text">
+                    <span id="typedText"></span>
+                    <span class="cursor-blink"></span>
+                </div>
+                <p class="bio"><span class="greeting-text" id="greeting">Hello everyone!</span> I am Gudela Naveen Kumar, a Computer Science student focused on Java and Full Stack development. I build scalable, user-focused applications using React, Node.js, Express.js, PHP, MySQL, and MongoDB. I am passionate about writing clean code, solving real-world problems, and contributing effectively in collaborative teams.</p>
+                
+                <div class="collaboration-badge">
+                    🚀 Open to Build Real-World Web Applications
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary"><span>View My Work</span></a>
+                    <a href="#contact" class="btn btn-secondary"><span>Get In Touch</span></a>
+                </div>
+
+                <div class="social-links">
+                    <a href="mailto:naveengudela7@gmail.com" class="social-link" aria-label="Email me"><i class="fas fa-envelope" aria-hidden="true"></i><span class="sr-only">Email</span></a>
+                    <a href="https://www.linkedin.com/in/naveen53/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in" aria-hidden="true"></i><span class="sr-only">LinkedIn</span></a>
+                    <a href="https://github.com/Naveen2-G" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub Profile"><i class="fab fa-github" aria-hidden="true"></i><span class="sr-only">GitHub</span></a>
+                    <a href="tel:+919346226686" class="social-link" aria-label="Call me"><i class="fas fa-phone-alt" aria-hidden="true"></i><span class="sr-only">Phone</span></a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="profile-container">
+                    <div class="profile-3d">
+                        <model-viewer
+                            id="heroModelViewer"
+                            class="profile-3d-model"
+                            src="assets/images/scene.gltf"
+                            poster="assets/images/main.png"
+                            alt="3D portfolio scene"
+                            camera-controls
+                            auto-rotate
+                            auto-rotate-delay="0"
+                            rotation-per-second="18deg"
+                            shadow-intensity="1"
+                            exposure="1"
+                            interaction-prompt="none"
+                            loading="eager"
+                            reveal="auto"
+                        ></model-viewer>
+                        <img
+                            id="heroModelFallback"
+                            class="profile-3d-image profile-3d-fallback"
+                            src="assets/images/main.png"
+                            alt="Portfolio visual"
+                            hidden
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="reveal">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <h3><span class="skill-icon"><i class="fas fa-code"></i></span> Languages</h3>
+                <div class="skill-items">
+                    <span class="skill-item" data-level="Advanced">Java</span>
+                    <span class="skill-item" data-level="Intermediate">C++</span>
+                    <span class="skill-item" data-level="Intermediate">Python</span>
+                    <span class="skill-item" data-level="Intermediate">JavaScript</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3><span class="skill-icon"><i class="fas fa-layer-group"></i></span> Frontend & Backend</h3>
+                <div class="skill-items">
+                    <span class="skill-item" data-level="Intermediate">React</span>
+                    <span class="skill-item" data-level="Intermediate">Node.js</span>
+                    <span class="skill-item" data-level="Intermediate">Express.js</span>
+                    <span class="skill-item" data-level="Intermediate">PHP</span>
+                    <span class="skill-item" data-level="Advanced">HTML</span>
+                    <span class="skill-item" data-level="Advanced">CSS</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3><span class="skill-icon"><i class="fas fa-database"></i></span> Databases</h3>
+                <div class="skill-items">
+                    <span class="skill-item" data-level="Advanced">MySQL</span>
+                    <span class="skill-item" data-level="Intermediate">MongoDB</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3><span class="skill-icon"><i class="fas fa-tools"></i></span> Tools & Platforms</h3>
+                <div class="skill-items">
+                    <span class="skill-item" data-level="Advanced">Git</span>
+                    <span class="skill-item" data-level="Advanced">GitHub</span>
+                    <span class="skill-item" data-level="Advanced">VS Code</span>
+                    <span class="skill-item" data-level="Intermediate">Eclipse</span>
+                    <span class="skill-item" data-level="Intermediate">Postman</span>
+                    <span class="skill-item" data-level="Intermediate">AWS</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3><span class="skill-icon"><i class="fas fa-user-friends"></i></span> Soft Skills</h3>
+                <div class="skill-items">
+                    <span class="skill-item" data-level="Advanced">Analytical Thinking</span>
+                    <span class="skill-item" data-level="Intermediate">Creativity</span>
+                    <span class="skill-item" data-level="Advanced">Problem-Solving</span>
+                    <span class="skill-item" data-level="Advanced">Teamwork</span>
+                    <span class="skill-item" data-level="Intermediate">Adaptability</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3><span class="skill-icon"><i class="fas fa-brain"></i></span> Core Competencies</h3>
+                <div class="skill-items">
+                    <span class="skill-item" data-level="Advanced">OOP in Java</span>
+                    <span class="skill-item" data-level="Intermediate">JDBC</span>
+                    <span class="skill-item" data-level="Intermediate">Role-based Access Control</span>
+                    <span class="skill-item" data-level="Intermediate">CRUD Workflows</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="reveal">
+        <h2 class="section-title">Experience & Training</h2>
+        <div class="experience-container">
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div>
+                        <h3 class="experience-title">Java Developer Core to Advanced</h3>
+                        <p class="experience-platform">Board Infinity | July 2025</p>
+                    </div>
+                </div>
+                <div class="experience-stats">
+                    <div class="stat-item">
+                        <div class="stat-number counter" data-target="2">0</div>
+                        <div class="stat-label">Major Projects</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number counter" data-target="7">0</div>
+                        <div class="stat-label">Core Java Topics</div>
+                    </div>
+                </div>
+                <p style="color: var(--text-secondary); line-height: 1.8;">
+                    Completed structured Java training covering Core Java, Object-Oriented Programming,
+                    Collections, Exception Handling, Multithreading, File I/O, and JDBC.
+                    Built mini applications for hands-on practice with debugging and modular code design.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="reveal">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card gradient-border glow-spread hover-lift stagger-item">
+                <div class="project-thumbnail">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&h=400&fit=crop" alt="Music School Management System" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <i class="fas fa-briefcase project-icon" style="display: none;"></i>
+                </div>
+                <div class="project-body">
+                    <h3>Music School Management System</h3>
+                    <p>Built a web-based system to manage student enrollment, lesson scheduling, teacher assignments, and performance tracking. Implemented recital/event management, role-based access (Admin, Teacher, Student), and streamlined CRUD workflows for smooth operations.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Express.js</span>
+                        <span class="tech-tag">Node.js</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Naveen2-G/MusicSchoolManagementSystem" target="_blank" rel="noopener noreferrer" class="project-link">View Code →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card gradient-border glow-spread hover-lift stagger-item">
+                <div class="project-thumbnail">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=600&h=400&fit=crop" alt="Movie Ticket Booking System" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <i class="fas fa-brain project-icon" style="display: none;"></i>
+                </div>
+                <div class="project-body">
+                    <h3>Movie Ticket Booking System</h3>
+                    <p>Deployed a web-based platform for movie browsing, showtime selection, and ticket booking using PHP and MySQL. Added secure authentication with role-based access and developed interactive seat selection with booking management through admin CRUD features.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Naveen2-G/Movie-Ticket-Booking-System" target="_blank" rel="noopener noreferrer" class="project-link">View Code →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card gradient-border glow-spread hover-lift stagger-item">
+                <div class="project-thumbnail">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop" alt="Student Tracker" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <i class="fas fa-film project-icon" style="display: none;"></i>
+                </div>
+                <div class="project-body">
+                    <h3>Student Tracker (LPU Grading System)</h3>
+                    <p>Built a student utility website for the LPU grading system featuring CGPA calculation, CGPA prediction, and attendance tracking in one place. Helps students monitor academic progress and plan each semester effectively.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Naveen2-G/Student-Tracker" target="_blank" rel="noopener noreferrer" class="project-link">View Code →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card gradient-border glow-spread hover-lift stagger-item">
+                <div class="project-thumbnail">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1518773553398-650c184e0bb3?w=600&h=400&fit=crop" alt="Number Guessing Game" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <i class="fas fa-gamepad project-icon" style="display: none;"></i>
+                </div>
+                <div class="project-body">
+                    <h3>Number Guessing Game</h3>
+                    <p>Built an interactive desktop game using JavaFX where users guess a randomly generated number with feedback on each attempt. Includes score tracking and retry flow for a smooth game experience.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">JavaFX</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Naveen2-G/PRODIGY_SD_2" target="_blank" rel="noopener noreferrer" class="project-link">View Code →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="reveal">
+        <h2 class="section-title">Highlights</h2>
+        <div class="achievements-grid">
+            <div class="achievement-card">
+                <div class="achievement-badge">🎓 Training</div>
+                <h3 class="achievement-title">Java Developer Core to Advanced</h3>
+                <p class="achievement-description">
+                    Completed structured Java training at Board Infinity with practical exposure to OOP,
+                    Collections, Multithreading, File I/O, Exception Handling, and JDBC.
+                </p>
+            </div>
+
+            <div class="achievement-card">
+                <div class="achievement-badge">💼 Projects</div>
+                <h3 class="achievement-title">Full Stack Project Delivery</h3>
+                <p class="achievement-description">
+                    Developed real-world projects including a Music School Management System (MERN)
+                    and a Movie Ticket Booking System (PHP/MySQL) with role-based workflows.
+                </p>
+            </div>
+
+            <div class="achievement-card">
+                <div class="achievement-badge">🤝 Activities</div>
+                <h3 class="achievement-title">Community & Continuous Learning</h3>
+                <p class="achievement-description">
+                    Volunteered at CVR Welfare Organisation and attended webinars on Web Development and AI
+                    to continuously improve practical and industry-relevant skills.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="reveal">
+        <h2 class="section-title">Certifications</h2>
+        <div class="cert-grid">
+            <div class="cert-card">
+                <h4>Master Generative AI & Generative AI Tools</h4>
+                <p>Udemy | August 2025</p>
+            </div>
+            <div class="cert-card">
+                <h4>Unrevealing Basic Python towards ML/AI</h4>
+                <p>CSE PATHSHALA | March 2024</p>
+            </div>
+            <div class="cert-card">
+                <h4>Computer Communications Specialization</h4>
+                <p>University of Colorado System (Coursera) | December 2024</p>
+            </div>
+            <div class="cert-card">
+                <h4>Java Developer Core to Advanced</h4>
+                <p>Board Infinity | July 2025</p>
+            </div>
+            <div class="cert-card">
+                <h4>Web Development & AI Webinars</h4>
+                <p>Continuous Learning | 2024-2025</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="reveal">
+        <h2 class="section-title">Education</h2>
+        <div class="education-container">
+            <div class="education-item">
+                <div class="education-content">
+                    <h3>B.Tech in Computer Science</h3>
+                    <p class="institution">Lovely Professional University</p>
+                    <p class="date">Since Aug 2023 | Punjab, India</p>
+                    <span class="grade">CGPA: 7.28/10</span>
+                </div>
+                <div class="education-dot"></div>
+            </div>
+
+            <div class="education-item">
+                <div class="education-content">
+                    <h3>Intermediate</h3>
+                    <p class="institution">Sri Chaitanya Junior college</p>
+                    <p class="date">June 2021 - March 2023 | Vijayawada, Andhra Pradesh</p>
+                    <span class="grade">96%</span>
+                </div>
+                <div class="education-dot"></div>
+            </div>
+
+            <div class="education-item">
+                <div class="education-content">
+                    <h3>Matriculation</h3>
+                    <p class="institution">Bheeram Sreedhar Reddy International School</p>
+                    <p class="date">March 2021 | Kadapa, Andhra Pradesh</p>
+                    <span class="grade">77%</span>
+                </div>
+                <div class="education-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-header reveal">
+            <h2 class="section-title">Contact Me</h2>
+            <p class="section-subtitle">Have a project in mind? Let's build something practical and impactful together!</p>
+        </div>
+        <div class="contact-container reveal">
+            <!-- Left Side: Contact Info -->
+            <div class="contact-info">
+                <h3 class="info-title">Let's Connect</h3>
+                <p class="info-desc">
+                    I'm actively looking for opportunities in Java and Full Stack development.
+                    If you have an opportunity or collaboration idea, I'd love to connect.
+                </p>
+                <div class="contact-details">
+                    <div class="detail-item copy-email" onclick="copyEmail()" title="Click to copy email">
+                        <i class="fas fa-envelope"></i>
+                        <span>naveengudela7@gmail.com</span>
+                        <i class="fas fa-copy copy-icon"></i>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+91 93462 26686</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>India</span>
+                    </div>
+                </div>
+                <!-- Clickable Social Icons -->
+                <div class="social-connect">
+                    <a href="https://www.linkedin.com/in/naveen53/" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn" aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin-in" aria-hidden="true"></i><span class="sr-only">LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/Naveen2-G" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub" aria-label="GitHub Profile">
+                        <i class="fab fa-github" aria-hidden="true"></i><span class="sr-only">GitHub</span>
+                    </a>
+                    <a href="mailto:naveengudela7@gmail.com" class="social-btn" title="Email" aria-label="Email me">
+                        <i class="fas fa-envelope" aria-hidden="true"></i><span class="sr-only">Email</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Side: Form -->
+            <div class="contact-form-wrapper">
+                <h3 class="info-title">Get In Touch</h3>
+                <form id="contactForm" action="https://formspree.io/f/mgolgwee" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" name="name" class="form-control" placeholder="Your Name" aria-label="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" class="form-control" placeholder="Your Email" aria-label="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn" id="submitBtn">Send Message <i class="fas fa-paper-plane"></i></button>
+                    <div id="formMessage"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-left">
+                    <h3>Let's Build Something<br>Impactful Together</h3>
+                    <p class="footer-tagline">Available for internships, freelance projects, collaborations, and full-time opportunities in Java and Full Stack development.</p>
+                    <div class="footer-social">
+                        <a href="mailto:naveengudela7@gmail.com" class="footer-social-link" title="Email" aria-label="Email me">
+                            <i class="fas fa-envelope" aria-hidden="true"></i><span class="sr-only">Email</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/naveen53/" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="LinkedIn" aria-label="LinkedIn Profile">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i><span class="sr-only">LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/Naveen2-G" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="GitHub" aria-label="GitHub Profile">
+                            <i class="fab fa-github" aria-hidden="true"></i><span class="sr-only">GitHub</span>
+                        </a>
+                        <a href="tel:+919346226686" class="footer-social-link" title="Phone" aria-label="Call me">
+                            <i class="fas fa-phone-alt" aria-hidden="true"></i><span class="sr-only">Phone</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-nav-title">Quick Links</div>
+                    <div class="footer-links">
+                        <a href="#home"><i class="fas fa-chevron-right"></i> Home</a>
+                        <a href="#skills"><i class="fas fa-chevron-right"></i> Skills</a>
+                        <a href="#experience"><i class="fas fa-chevron-right"></i> Experience</a>
+                        <a href="#projects"><i class="fas fa-chevron-right"></i> Projects</a>
+                        <a href="#achievements"><i class="fas fa-chevron-right"></i> Achievements</a>
+                        <a href="#education"><i class="fas fa-chevron-right"></i> Education</a>
+                    </div>
+                    <a href="#contact" class="footer-cta">
+                        <i class="fas fa-paper-plane"></i> Start a Conversation
+                    </a>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; <span id="currentYear"></span> Naveen Kumar. Crafted with <i class="fas fa-heart"></i> and code.</p>
+                <p class="footer-credit">Designed & Built by <a href="#home">Naveen Kumar</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- JS Modules -->
+    <script src="js/modules/theme.js"></script>
+    <script src="js/modules/cursor.js"></script>
+    <script src="js/modules/particles-config.js"></script>
+    <script src="js/modules/typing.js"></script>
+    <script src="js/modules/navigation.js"></script>
+    <script src="js/modules/scroll.js"></script>
+    <script src="js/modules/animations.js"></script>
+    <script src="js/modules/form.js"></script>
+    <script src="js/modules/utils.js"></script>
+    <script src="js/modules/model-viewer.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

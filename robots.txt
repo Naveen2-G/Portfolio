@@ -1,0 +1,6 @@
+# Robots.txt for Naveen Kumar Portfolio
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://naveen2-g.github.io/Personal_Portfolio/sitemap.xml
