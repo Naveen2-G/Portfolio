@@ -99,3 +99,32 @@
     color: var(--text-secondary);
     font-size: 0.95rem;
 }
+
+.cert-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    padding: 0.55rem 1rem;
+    border-radius: 999px;
+    border: 1px solid var(--accent-secondary);
+    background: transparent;
+    color: var(--accent-secondary);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.cert-link:hover {
+    background: var(--accent-secondary);
+    color: var(--bg-primary);
+    box-shadow: 0 10px 25px var(--glow);
+    transform: translateY(-2px);
+}
+
+.cert-link:focus-visible {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 3px;
+}

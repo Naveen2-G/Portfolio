@@ -206,8 +206,8 @@
 }
 
 .light-mode .form-control {
-    background: rgba(0, 0, 0, 0.02);
-    border-color: #cbd5e1;
+    background: rgba(148, 163, 184, 0.08);
+    border-color: rgba(129, 140, 248, 0.35);
     color: var(--text-primary);
 }
 

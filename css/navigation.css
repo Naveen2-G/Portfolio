@@ -42,7 +42,7 @@ nav.nav-hidden {
 }
 
 .light-mode nav {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(11, 17, 32, 0.82);
     border-color: var(--card-border);
 }
 
@@ -69,8 +69,8 @@ nav.nav-hidden {
 }
 
 .light-mode .nav-brand {
-    background: #ffffff;
-    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+    background: rgba(17, 24, 39, 0.9);
+    box-shadow: 0 4px 12px rgba(2, 6, 23, 0.35);
 }
 
 nav ul,

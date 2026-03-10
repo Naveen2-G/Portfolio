@@ -81,10 +81,17 @@
 }
 
 /* CV Download Button */
-.cv-download-btn {
+.cv-actions {
     position: fixed;
     top: 1.5rem;
     right: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 998;
+}
+
+.cv-download-btn {
     padding: 0.8rem 1.5rem;
     background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
     border: none;
@@ -98,7 +105,6 @@
     justify-content: center;
     min-width: 132px;
     gap: 0.5rem;
-    z-index: 998;
     box-shadow: 0 10px 24px var(--card-shadow);
     transition: all 0.3s ease;
 }
@@ -109,9 +115,6 @@
 }
 
 .cv-view-btn {
-    position: fixed;
-    top: 1.5rem;
-    right: calc(2rem + 132px + 1.15rem);
     padding: 0.8rem 1.3rem;
     background: var(--bg-secondary);
     border: 1px solid var(--card-border);
@@ -125,7 +128,6 @@
     justify-content: center;
     min-width: 132px;
     gap: 0.5rem;
-    z-index: 998;
     box-shadow: 0 10px 24px var(--card-shadow);
     transition: all 0.3s ease;
 }
@@ -230,7 +232,7 @@
     height: 100vh;
     z-index: -2;
     overflow: hidden;
-    background: #fff;
+    background: radial-gradient(circle at 15% 20%, #0f172a 0%, #020617 45%, #02030a 100%);
 }
 
 .light-mode .light-bg-container {
