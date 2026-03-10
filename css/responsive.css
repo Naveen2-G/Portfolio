@@ -417,6 +417,18 @@
         gap: 0.8rem;
     }
 
+    .case-study-card {
+        padding: 1.5rem;
+    }
+
+    .case-study-title {
+        font-size: 1.45rem;
+    }
+
+    .case-study-grid {
+        grid-template-columns: 1fr;
+    }
+
     .project-link {
         padding: 0.7rem;
     }

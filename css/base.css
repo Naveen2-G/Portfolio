@@ -81,6 +81,7 @@ section {
     max-width: 1400px;
     margin: 0 auto;
     position: relative;
+    scroll-margin-top: 7rem;
 }
 
 .section-title {
@@ -217,6 +218,19 @@ section {
 .skip-nav:focus {
     top: 0;
     outline: none;
+}
+
+/* Global keyboard focus visibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[role="button"]:focus-visible {
+    outline: 3px solid var(--accent-secondary);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2);
+    border-radius: 8px;
 }
 
 .sr-only {

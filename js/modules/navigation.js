@@ -24,19 +24,48 @@ function toggleMenu() {
     const navUl = document.querySelector('nav ul') || document.querySelector('nav .nav-links');
     hamburger.classList.toggle('active');
     navUl.classList.toggle('active');
+    const isExpanded = navUl.classList.contains('active');
+    hamburger.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
 }
 
 // Make toggleMenu available globally
 window.toggleMenu = toggleMenu;
 
-// Smooth scroll
+const hamburgerControl = document.querySelector('.hamburger');
+if (hamburgerControl) {
+    hamburgerControl.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleMenu();
+        }
+    });
+}
+
+// Smooth scroll with fixed-nav offset so each section lands cleanly
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const href = this.getAttribute('href');
+        if (!href || href === '#') {
+            return;
         }
+
+        const target = document.querySelector(href);
+        if (!target) {
+            return;
+        }
+
+        e.preventDefault();
+
+        const navHeight = nav ? nav.offsetHeight : 0;
+        const offset = navHeight + 24;
+        const targetTop = target.getBoundingClientRect().top + window.scrollY - offset;
+
+        window.scrollTo({
+            top: Math.max(targetTop, 0),
+            behavior: prefersReducedMotion ? 'auto' : 'smooth'
+        });
     });
 });
 
@@ -84,6 +113,7 @@ document.addEventListener('click', (e) => {
         !hamburger.contains(e.target)) {
         navUl.classList.remove('active');
         hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
     }
 });
 
@@ -95,6 +125,7 @@ document.addEventListener('keydown', (e) => {
         if (navUl && navUl.classList.contains('active')) {
             navUl.classList.remove('active');
             hamburger.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
         }
     }
 });

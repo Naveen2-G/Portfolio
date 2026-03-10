@@ -77,6 +77,56 @@
     line-height: 1.8;
 }
 
+.learning-now {
+    padding-top: 0;
+    margin-top: -1rem;
+}
+
+.learning-card {
+    max-width: 980px;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 1.5rem 1.8rem;
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.09), rgba(129, 140, 248, 0.07));
+    border: 1px solid var(--card-border);
+    box-shadow: 0 14px 30px var(--card-shadow);
+}
+
+.learning-card-label {
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin-bottom: 0.45rem;
+}
+
+.learning-card-title {
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+}
+
+.learning-card-desc {
+    color: var(--text-secondary);
+    font-size: 0.98rem;
+    line-height: 1.65;
+}
+
+.learning-topic {
+    color: var(--accent-secondary);
+    font-weight: 700;
+    min-width: 150px;
+    display: inline-block;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.learning-topic.is-updating {
+    opacity: 0;
+    transform: translateY(5px);
+}
+
 .hero-visual {
     position: relative;
     display: flex;

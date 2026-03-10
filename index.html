@@ -151,12 +151,12 @@
             <img src="assets/icons/favicon.svg" alt="Naveen Portfolio Logo" loading="lazy">
             <span class="sr-only">Naveen Portfolio Home</span>
         </a>
-        <div class="hamburger" onclick="toggleMenu()">
+        <div class="hamburger" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
             <span></span>
             <span></span>
             <span></span>
         </div>
-        <ul class="nav-links">
+        <ul class="nav-links" id="navLinks">
             <li><a href="#home" class="nav-link active" onclick="toggleMenu()">Home</a></li>
             <li><a href="#skills" class="nav-link" onclick="toggleMenu()">Skills</a></li>
             <li><a href="#experience" class="nav-link" onclick="toggleMenu()">Experience</a></li>
@@ -165,7 +165,7 @@
             <li><a href="#education" class="nav-link" onclick="toggleMenu()">Education</a></li>
             <li><a href="#contact" class="nav-link" onclick="toggleMenu()">Contact</a></li>
             <li>
-                <div class="theme-toggle" onclick="toggleTheme()">
+                <div class="theme-toggle" onclick="toggleTheme()" role="button" tabindex="0" aria-label="Toggle theme" aria-pressed="false">
                     <div class="theme-toggle-ball"></div>
                 </div>
             </li>
@@ -179,11 +179,10 @@
                 <a href="https://www.linkedin.com/in/naveen53/" target="_blank" rel="noopener noreferrer" class="badge" style="cursor: pointer; text-decoration: none;">🚀 Available for Internship & Entry-Level Roles</a>
                 <h1 class="glitch" data-text="Naveen Kumar">Naveen Kumar</h1>
                 <div class="typing-text">
-                    <span id="typedText"></span>
-                    <span class="cursor-blink"></span>
+                    <span class="hero-role">Java Developer | Full Stack Web Developer</span>
                 </div>
                 <p class="bio"><span class="greeting-text" id="greeting">Hello everyone!</span> I am Gudela Naveen Kumar, a Computer Science student focused on Java and Full Stack development. I build scalable, user-focused applications using React, Node.js, Express.js, PHP, MySQL, and MongoDB. I am passionate about writing clean code, solving real-world problems, and contributing effectively in collaborative teams.</p>
-                
+
                 <div class="collaboration-badge">
                     🚀 Open to Build Real-World Web Applications
                 </div>
@@ -416,6 +415,56 @@
         </div>
     </section>
 
+    <!-- Featured Case Study Section -->
+    <section id="case-study" class="reveal">
+        <h2 class="section-title">Featured Case Study</h2>
+        <div class="case-study-card glass-card">
+            <div class="case-study-header">
+                <p class="case-study-label">Project Deep Dive</p>
+                <h3 class="case-study-title">Music School Management System</h3>
+                <p class="case-study-summary">A full-stack platform designed to digitally manage a music school with role-based dashboards and real-world workflows.</p>
+            </div>
+
+            <div class="case-study-grid">
+                <article class="case-study-block">
+                    <h4>Problem</h4>
+                    <p>Traditional manual operations made it difficult to coordinate admissions, teacher assignments, schedules, fee tracking, and recital management across different user groups.</p>
+                </article>
+
+                <article class="case-study-block">
+                    <h4>Stack</h4>
+                    <p>React, Node.js, Express.js, MongoDB, REST APIs, JWT-based authentication, and responsive UI components for role-specific dashboards.</p>
+                </article>
+
+                <article class="case-study-block">
+                    <h4>Architecture</h4>
+                    <p>Built as a layered MERN architecture with secure authentication and role-based access control, separating workflows for Admin, Teacher, and Student dashboards while keeping business logic centralized through APIs, including online fee submission/payment handling for students and teacher-side attendance marking workflows.</p>
+                </article>
+
+                <article class="case-study-block">
+                    <h4>Challenges</h4>
+                    <ul class="case-study-points">
+                        <li>Preventing schedule collisions when multiple teachers and students were updated in overlapping time slots.</li>
+                        <li>Designing strict role-based access so Admin, Teacher, and Student users could only access permitted actions and data.</li>
+                        <li>Keeping enrollment status transitions (pending, approved, declined) consistent between landing-page requests and dashboard workflows.</li>
+                        <li>Maintaining data integrity across interconnected modules like fees, recitals, practice logs, and student-teacher assignments.</li>
+                        <li>Balancing a responsive modern UI with form-heavy dashboards while preserving usability on mobile and desktop screens.</li>
+                    </ul>
+                </article>
+
+                <article class="case-study-block case-study-results">
+                    <h4>Results</h4>
+                    <p>Delivered a scalable foundation for real-world music school operations and improved end-to-end visibility across roles, including smoother fee collection through online student fee submission and better class tracking through teacher attendance marking. The complete implementation includes more detailed flows than shown in the demo walkthrough.</p>
+                    <p>This project strengthened my hands-on skills in full-stack architecture, API design and integration, role-based permissions, real-world admin workflows, and scalable frontend-backend structure.</p>
+                </article>
+            </div>
+
+            <div class="case-study-footer">
+                <a href="https://github.com/Naveen2-G/MusicSchoolManagementSystem" target="_blank" rel="noopener noreferrer" class="project-link">View Case Study Code →</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Achievements Section -->
     <section id="achievements" class="reveal">
         <h2 class="section-title">Highlights</h2>
@@ -477,6 +526,15 @@
                 <h4>Web Development & AI Webinars</h4>
                 <p>Continuous Learning | 2024-2025</p>
             </div>
+        </div>
+    </section>
+
+    <!-- Learning Now Section -->
+    <section id="learning-now" class="learning-now reveal">
+        <div class="learning-card glass-card" aria-live="polite">
+            <p class="learning-card-label">What I'm Learning Now</p>
+            <h3 class="learning-card-title">Currently focused on <span class="learning-topic">Spring Boot, System Design, GenAI APIs</span></h3>
+            <p class="learning-card-desc">I am actively sharpening backend architecture, scalable API design, and AI integration patterns for production-ready applications.</p>
         </div>
     </section>
 

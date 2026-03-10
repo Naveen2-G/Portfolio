@@ -141,6 +141,11 @@ nav .nav-link.active::after {
     border: 1px solid var(--card-border);
 }
 
+.theme-toggle:focus-visible {
+    outline: 3px solid var(--accent-secondary);
+    outline-offset: 3px;
+}
+
 .theme-toggle-ball {
     position: absolute;
     width: 20px;
@@ -165,6 +170,12 @@ nav .nav-link.active::after {
     cursor: pointer;
     z-index: 1002;
     padding: 10px;
+}
+
+.hamburger:focus-visible {
+    outline: 3px solid var(--accent-secondary);
+    outline-offset: 3px;
+    border-radius: 8px;
 }
 
 .hamburger span {

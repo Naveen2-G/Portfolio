@@ -7,7 +7,7 @@
 // 1. theme.js - Load first to set theme
 // 2. cursor.js - Custom cursor effects  
 // 3. particles-config.js - Background particles
-// 4. typing.js - Typing animation
+// 4. typing.js - Hero role text
 // 5. navigation.js - Nav functionality
 // 6. scroll.js - Scroll effects
 // 7. animations.js - Card animations
