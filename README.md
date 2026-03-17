@@ -2,7 +2,7 @@
 
 Modern, responsive portfolio website with dark/light mode.
 
-## 🔗 [Live Demo](https://naveen2-g.github.io/Personal_Portfolio/)
+## 🔗 [Live Demo](https://naveen2-g.github.io/naveen-portfolio/)
 
 ## ✨ Features
 
@@ -19,8 +19,8 @@ HTML5 • CSS3 • JavaScript • Particles.js • Font Awesome
 ## 🚀 Quick Start
 
 ```bash
-git clone https://github.com/Naveen2-G/Personal_Portfolio.git
-cd Personal_Portfolio
+git clone https://github.com/Naveen2-G/naveen-portfolio.git
+cd naveen-portfolio
 # Open index.html in browser
 ```
 
