@@ -108,6 +108,46 @@
         <span>Email copied to clipboard!</span>
     </div>
 
+    <!-- Personal Chatbot -->
+    <button class="chatbot-toggle" id="chatbotToggle" type="button" aria-label="Open personal chatbot" aria-expanded="false" aria-controls="chatbotPanel">
+        <i class="fas fa-comment-dots" aria-hidden="true"></i>
+        <span>Chat</span>
+    </button>
+
+    <div class="chatbot-panel" id="chatbotPanel" aria-label="Personal chatbot assistant" aria-hidden="true">
+        <header class="chatbot-header">
+            <div class="chatbot-title-wrap">
+                <span class="chatbot-avatar"><i class="fas fa-robot" aria-hidden="true"></i></span>
+                <div>
+                    <h3>Naveen Assistant</h3>
+                    <p>Ask about skills, projects, or contact details</p>
+                </div>
+            </div>
+            <button class="chatbot-close" id="chatbotClose" type="button" aria-label="Close chatbot">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+        </header>
+
+        <div class="chatbot-body">
+            <div class="chatbot-messages" id="chatbotMessages" role="log" aria-live="polite" aria-relevant="additions"></div>
+
+            <div class="chatbot-quick-actions">
+                <button type="button" data-question="What are your key skills?">Skills</button>
+                <button type="button" data-question="Show me your best projects">Projects</button>
+                <button type="button" data-question="How can I contact you?">Contact</button>
+                <button type="button" data-question="Can I download your resume?">Resume</button>
+            </div>
+        </div>
+
+        <form class="chatbot-input-wrap" id="chatbotForm">
+            <label for="chatbotInput" class="sr-only">Type your message</label>
+            <input id="chatbotInput" type="text" maxlength="180" placeholder="Ask something about Naveen..." autocomplete="off" required>
+            <button type="submit" aria-label="Send message">
+                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+            </button>
+        </form>
+    </div>
+
     <!-- CV Action Buttons -->
     <div class="cv-actions">
         <a href="assets/documents/NaveenKumarCV.pdf" download="NaveenKumarCV.pdf" class="cv-download-btn" onclick="downloadCV(event)">
@@ -693,6 +733,7 @@
     <script src="js/modules/cursor.js"></script>
     <script src="js/modules/particles-config.js"></script>
     <script src="js/modules/typing.js"></script>
+    <script src="js/modules/chatbot.js"></script>
     <script src="js/modules/navigation.js"></script>
     <script src="js/modules/scroll.js"></script>
     <script src="js/modules/animations.js"></script>
