@@ -2,7 +2,7 @@
 
 Modern, responsive portfolio website with dark/light mode.
 
-## 🔗 [Live Demo](https://naveen2-g.github.io/naveen-portfolio/)
+## 🔗 [Live Demo](https://naveenportfolio23.vercel.app/)
 
 ## ✨ Features
 
